@@ -91,5 +91,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/honoka.pc
-%{_libdir}/scim-%{scim_major}/*/*.a
-%{_libdir}/scim-%{scim_major}/*/*.la
+%{scim_plugins_dir}/*/*.a
+%{scim_plugins_dir}/*/*.la
