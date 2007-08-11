@@ -19,9 +19,9 @@ Source0:    %{src_name}-%{version}.tar.bz2
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
 Provides:      honoka, libhonoka
 Obsoletes:     honoka, libhonoka
-Requires:      %{libname} = %{version}
+Requires:      %{libname} = %{version}-%{release}
 Requires:      scim >= %{scim_version}
-BuildRequires: scim-devel >= 1.4.7-3mdk
+BuildRequires: scim-devel >= 1.4.7-4mdk
 BuildRequires: automake
 BuildRequires: libltdl-devel
 
@@ -32,7 +32,6 @@ Honoka is an SCIM IMEngine module for Japanese.
 %package -n %{libname}
 Summary:    Scim-honoka library
 Group:      System/Internationalization
-Provides:   %{libname_orig} = %{version}-%{release}
 
 %description -n %{libname}
 scim-honoka library.
@@ -40,7 +39,7 @@ scim-honoka library.
 %package -n %{develname}
 Summary:    Headers of scim-honoka for development
 Group:      Development/C
-Requires:   %{libname} = %{version}
+Requires:   %{libname} = %{version}-%{release}
 Provides:   %{name}-devel = %{version}-%{release}
 Provides:   %{libname_orig}-devel = %{version}-%{release}
 Obsoletes:  %libname-devel
@@ -51,7 +50,6 @@ Headers of %{name} for development.
 
 %prep
 %setup -q -n %{src_name}-%{version}
-cp /usr/share/automake-1.10/mkinstalldirs .
 
 %build
 [[ -f configure ]] || ./bootstrap
@@ -83,9 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING
 %{_libdir}/*.so.*
 %{scim_plugins_dir}/IMEngine/*.so
-%{scim_plugins_dir//SetupUI/*.so
+%{scim_plugins_dir}/SetupUI/*.so
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root)
 %doc COPYING
 %{_includedir}/honoka/*.h
