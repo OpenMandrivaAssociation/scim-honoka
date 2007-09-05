@@ -15,7 +15,7 @@ Release:    %{release}
 Group:      System/Internationalization
 License:    GPL
 URL:        http://nop.net-p.org/modules/pukiwiki/index.php?%5B%5Bhonoka%5D%5D
-Source0:    %{src_name}-%{version}.tar.bz2
+Source0:    http://nop.net-p.org/files/honoka/%{src_name}-%{version}.tar.bz2
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
 Provides:      honoka, libhonoka
 Obsoletes:     honoka, libhonoka
