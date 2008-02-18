@@ -9,7 +9,7 @@
 %define develname %mklibname -d %{name}
 
 Name:       scim-honoka
-Summary:    Honoka is an SCIM IMEngine module for Japanese
+Summary:    SCIM IMEngine module for Japanese
 Version:    %{version}
 Release:    %{release}
 Group:      System/Internationalization
