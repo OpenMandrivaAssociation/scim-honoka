@@ -21,6 +21,9 @@ Provides:      honoka, libhonoka
 Obsoletes:     honoka, libhonoka
 Requires:      %{libname} = %{version}-%{release}
 Requires:      scim >= %{scim_version}
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: scim-devel >= 1.4.7-4mdk
 BuildRequires: automake
 BuildRequires: libltdl-devel
